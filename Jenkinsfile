@@ -10,7 +10,7 @@ pipeline {
     stage('error') {
       steps {
         withGradle() {
-          sh '''.7gradlew build
+          sh '''./gradlew build
 '''
         }
 
