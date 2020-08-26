@@ -4,14 +4,8 @@ pipeline {
     stage('git') {
       steps {
         git(url: 'https://github.com/fernandompv/Libreria.git', branch: 'master')
-      }
-    }
-
-    stage('error') {
-      steps {
         withGradle() {
-          sh '''./gradlew build
-'''
+          sh 'gradle build'
         }
 
       }
