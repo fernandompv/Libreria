@@ -7,5 +7,15 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        withGradle() {
+          sh '''gradle build
+'''
+        }
+
+      }
+    }
+
   }
 }
