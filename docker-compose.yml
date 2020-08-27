@@ -3,6 +3,8 @@ services:
     springapp:
       build: .
       container_name: libreria
+      volumes:
+      -/var/jenkins_home/workspace/Compilacion/:/app
       environment:
         SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/libreria
       ports:
