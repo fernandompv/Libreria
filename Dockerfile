@@ -1,3 +1,4 @@
 FROM openjdk:8-jdk-alpine
-COPY . /app
-ENTRYPOINT ["java","-jar","/app/build/libs/Libreria-0.0.1-SNAPSHOT.jar"]
+WORKDIR /app
+COPY build/libs/*.jar Libreria-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","Libreria-0.0.1-SNAPSHOT.jar"]
