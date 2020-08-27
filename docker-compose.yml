@@ -1,0 +1,29 @@
+version: "3"
+services:
+    springapp:
+      build: .
+      container_name: libreria
+      volumes:
+        - ./build/libs:/app
+      environment:
+        SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/libreria
+      ports:
+        - 8085:8085
+      restart: always
+      links:
+        - db
+      depends_on:
+        - db
+    db:
+      container_name: libreria_db
+      image: postgres:13-alpine
+      environment:
+        - POSTGRES_USER=fernando
+        - POSTGRES_PASSWORD=disashop
+        - POSTGRES_DB=libreria
+        - PGDATA=/var/lib/postgresql/data/pgdata
+      volumes:
+        - ./Libreria_tablas.sql:/docker-entrypoint-initdb.d/Libreria_tablas.sql
+      ports:
+        - 5432:5432
+      restart: always
