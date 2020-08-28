@@ -9,8 +9,6 @@ services:
         SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/libreria
       ports:
         - 8085:8085
-      links:
-        - db
       depends_on:
         - db
     db:
