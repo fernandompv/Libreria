@@ -20,7 +20,7 @@ services:
         - POSTGRES_DB=libreria
         - PGDATA=/var/lib/postgresql/data/pgdata
       volumes:
-        - ./tablas:/docker-entrypoint-initdb.d:rw
+        - ./tablas/Libreria_tablas.sql:/docker-entrypoint-initdb.d/Libreria_tablas.sql:rw
       ports:
         - 5432:5432
       restart: always
