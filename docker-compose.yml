@@ -20,7 +20,7 @@ services:
         - POSTGRES_DB=libreria
         - PGDATA=/var/lib/postgresql/data/pgdata
       volumes:
-        - ./01tablas.sql:/docker-entrypoint-initdb.d/01tablas.sql
+        - ./var/jenkins_home/workspace/Compilacion/tablas/01tablas.sql:/docker-entrypoint-initdb.d/01tablas.sql
       ports:
         - 5432:5432
       restart: always
