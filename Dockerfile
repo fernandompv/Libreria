@@ -3,5 +3,5 @@ COPY tables/*.sql docker-entrypoint-initdb.d/01tablas.sql
 EXPOSE 5432
 
 FROM openjdk:8-jdk-alpine as dev
+RUN ["touch app"]
 COPY build/libs/*.jar /app/Libreria-0.0.1-SNAPSHOT.jar
-ENTRYPOINT ["java","-jar","build/libs/Libreria-0.0.1-SNAPSHOT.jar"]
