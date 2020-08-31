@@ -3,6 +3,5 @@ COPY build/libs/*.jar Libreria-0.0.1-SNAPSHOT.jar
 ENTRYPOINT ["java","-jar","Libreria-0.0.1-SNAPSHOT.jar"]
 
 FROM postgres:13-alpine as base
-COPY tables/*.sql 01tablas.sql
+COPY tables/*.sql docker-entrypoint-initdb.d/01tablas.sql
 EXPOSE 5432
-RUN ["/bin/bash","-c","cp 01tablas.sql docker-entrypoint-initdb.d/"]

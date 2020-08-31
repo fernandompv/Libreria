@@ -15,11 +15,11 @@ services:
         - db
     db:
       container_name: libreria_db
+      volumes:
+        - ./tables:/docker-entrypoint-initdb.d/
       build:
         context: ./
         target: base
-      volumes:
-        - ./tables:/docker-entrypoint-initdb.d/
       environment:
         - POSTGRES_USER=fernando
         - POSTGRES_PASSWORD=disashop
