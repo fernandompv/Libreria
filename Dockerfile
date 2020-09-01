@@ -1,4 +1,5 @@
 FROM openjdk:8-jdk-alpine as api
+EXPOSE 8085
 COPY build/libs/*.jar app/Libreria-0.0.1-SNAPSHOT.jar
 ENTRYPOINT ["java","-jar","app/Libreria-0.0.1-SNAPSHOT.jar"]
 
