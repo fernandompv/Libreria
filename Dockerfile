@@ -6,4 +6,5 @@ RUN mkdir -p /app
 COPY build/libs/*.jar Libreria-0.0.1-SNAPSHOT.jar
 RUN mv Libreria-0.0.1-SNAPSHOT.jar app/
 RUN rm -rf Libreria-0.0.1-SNAPSHOT.jar
+VOLUME app/
 ENTRYPOINT ["java","-jar","app/Libreria-0.0.1-SNAPSHOT.jar"]
