@@ -8,11 +8,12 @@ services:
         SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/libreria
       depends_on:
         - db
+      ports:
+        - 8085:8085
       build:
         context: ./
         target: api
-      ports:
-        - 9080:9080
+      restart: always
     db:
       container_name: libreria_db
       volumes:
