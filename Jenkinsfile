@@ -1,17 +1,15 @@
 node{
-    stage('limpiamos los contenedores e imagenes'){
-        sh 'docker-compose down'
-        sh 'docker rmi $(docker images -q)''
-    }
+    agent none
     stage('Git clone'){
         git url: 'https://github.com/fernandompv/Libreria.git'
     }
-
     stage('build'){
+        sh 'gradle clean'
+        sh 'gradle check'
         sh 'gradle build'
     }
-
     stage('despliegue'){
+        sh 'docker-compose down'
         sh 'docker-compose up -d'
     }
 }
