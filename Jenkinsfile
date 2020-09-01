@@ -1,7 +1,7 @@
 node{
     agent none
     stage('Git clone'){
-        git 'https://github.com/fernandompv/Libreria.git'
+        git url: 'https://github.com/fernandompv/Libreria.git'
     }
     stage('build'){
         sh 'gradle clean'
