@@ -6,10 +6,10 @@ services:
         - ./build/libs/:/app
       environment:
         SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/libreria
-      depends_on:
-        - db
       ports:
         - 8085:8085
+      depends_on:
+        - db
       build:
         context: ./
         target: api
