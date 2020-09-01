@@ -4,22 +4,22 @@ services:
       container_name: libreria
       volumes:
         - ./build/libs/:/app
-      build:
-        context: ./
-        target: dev
       environment:
         SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/libreria
       ports:
         - 8085:8085
       depends_on:
         - db
+      build:
+        context: ./
+        target: api
     db:
       container_name: libreria_db
       volumes:
         - ./tables:/docker-entrypoint-initdb.d/
       build:
         context: ./
-        target: base
+        target: postgres
       environment:
         - POSTGRES_USER=fernando
         - POSTGRES_PASSWORD=disashop
