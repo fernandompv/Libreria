@@ -12,7 +12,7 @@ services:
         context: ./
         target: api
       ports:
-        - 8085:8085
+        - 9080:9080
     db:
       container_name: libreria_db
       volumes:
