@@ -2,6 +2,8 @@ version: "3.5"
 services:
     springapp:
       container_name: libreria
+      depends_on:
+        - db
       build:
         context: ./
         target: api
@@ -11,8 +13,6 @@ services:
         SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/libreria
       ports:
         - 8085:8085
-      depends_on:
-        - db
     db:
       container_name: libreria_db
       volumes:
