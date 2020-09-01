@@ -3,7 +3,7 @@ services:
     springapp:
       container_name: libreria
       volumes:
-        - ./build/libs:/app/
+        - ./build/libs/:/app
       build:
         context: ./
         target: dev
