@@ -6,7 +6,7 @@ services:
         context: ./
         target: api
       volumes:
-        - ./build/libs/:/app
+        - ./build/libs/:/app/
       environment:
         SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/libreria
       ports:
