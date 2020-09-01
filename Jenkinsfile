@@ -1,5 +1,4 @@
 node{
-    agent none
     stage('Git clone'){
         git url: 'https://github.com/fernandompv/Libreria.git'
     }
