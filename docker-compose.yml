@@ -3,7 +3,7 @@ services:
     springapp:
       container_name: libreria
       build:
-        context: var/jenkins_home/workspace/Compilacion
+        context: ./
         target: api
       environment:
         SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/libreria
@@ -18,7 +18,7 @@ services:
       volumes:
         - ./tables:/docker-entrypoint-initdb.d/
       build:
-        context: var/jenkins_home/workspace/Compilacion
+        context: ./
         target: postgres
       environment:
         - POSTGRES_USER=fernando
