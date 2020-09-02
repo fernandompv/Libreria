@@ -2,13 +2,13 @@ version: "3.5"
 services:
     springapp:
       container_name: libreria
-      volumes:
-        - ./build/libs/:/project/
       build:
         context: ./
         target: api
       environment:
         SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/libreria
+      volumes:
+        - ./build/libs/:/project/
       ports:
         - 8085:8085
       depends_on:

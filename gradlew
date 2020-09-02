@@ -62,6 +62,7 @@ die () {
 
 # OS specific support (must be 'true' or 'false').
 cygwin=false
+unset WORKSPACE
 msys=false
 darwin=false
 nonstop=false
