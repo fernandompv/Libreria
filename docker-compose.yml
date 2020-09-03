@@ -8,13 +8,11 @@ services:
       environment:
         SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/libreria
       volumes:
-        - "var/jenkins_home/workspace/Compilacion/build/libs/:/project/"
+        - "myjar:/project/"
       ports:
         - 8085:8085
       depends_on:
         - db
-      volumes:
-        myjar:
     db:
       container_name: libreria_db
       volumes:
@@ -30,3 +28,6 @@ services:
       ports:
         - 5432:5432
       restart: always
+      
+    volumes:
+        myjar:
