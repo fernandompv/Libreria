@@ -1,7 +1,6 @@
 node{
     stage('Git clone'){
-        git url: 'https://github.com/fernandompv/Libreria.git'
-		git clone: 'https://github.com/fernandompv/Libreria.git'
+        git 'https://github.com/fernandompv/Libreria.git'
     }
     stage('build'){
         sh 'gradle clean'
