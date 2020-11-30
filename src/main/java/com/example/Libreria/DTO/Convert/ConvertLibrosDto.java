@@ -9,6 +9,7 @@ public class ConvertLibrosDto {
 
     public GetLibrosDto convertLibrosToGetLibrosDto(Libros libros){
         return GetLibrosDto.builder()
+                .id_Libro(libros.getId_libro())
                 .nombre(libros.getNombre())
                 .precio(libros.getPrecio())
                 .stock(libros.getStock())
