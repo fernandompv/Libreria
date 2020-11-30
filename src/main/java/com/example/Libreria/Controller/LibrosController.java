@@ -52,7 +52,6 @@ public class LibrosController {
     @PutMapping("/Libro/{id}")
     public Libros putLibro(@RequestBody Libros edit, @PathVariable Long id){
         return service.findById(id).map(p -> {
-            p.setGenero(edit.getGenero());
             p.setNombre(edit.getNombre());
             p.setPrecio(edit.getPrecio());
             p.setStock(edit.getStock());

@@ -15,8 +15,6 @@ import javax.persistence.*;
 public class Boligrafos {
 
     @ApiModelProperty(value="ID del boligrafo", dataType="long",  example="1", position=1)
-    @SequenceGenerator(name = "seq",sequenceName = "id_boligrafo",allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq")
     @Id
     private Long id_boligrafo;
 

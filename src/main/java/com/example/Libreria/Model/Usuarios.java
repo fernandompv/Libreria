@@ -23,9 +23,7 @@ import java.util.stream.Collectors;
 @Builder
 public class Usuarios implements UserDetails {
 
-    @SequenceGenerator(name = "seq",sequenceName = "id_usuario",allocationSize = 1)
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq")
     private Long id_usuario;
 
     private String nombre;

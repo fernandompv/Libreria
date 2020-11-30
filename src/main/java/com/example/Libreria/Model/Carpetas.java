@@ -15,9 +15,7 @@ import javax.persistence.*;
 public class Carpetas {
 
     @ApiModelProperty(value="ID de la carpeta", dataType="long",  example="1", position=1)
-    @SequenceGenerator(name = "seq",sequenceName = "id_carpetas",allocationSize = 1)
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq")
     private Long id_carpetas;
 
     @ApiModelProperty(value="Nombre de la carpeta o  marca", dataType="String", example="Dellivery", position=2)

@@ -13,9 +13,7 @@ import javax.persistence.*;
 @Table(name = "libretas")
 public class Libretas {
 
-    @SequenceGenerator(name = "seq",sequenceName = "id_libreta",allocationSize = 1)
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq")
     private Long id_libreta;
 
     private String nombre;

@@ -16,9 +16,7 @@ import java.util.Set;
 @Table(name = "linea_pedido")
 @Builder
 public class Linea_pedido{
-    @SequenceGenerator(name = "seq",sequenceName = "id_linea",allocationSize = 1)
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq")
     private Long id_linea;
 
     @ElementCollection(fetch = FetchType.EAGER)

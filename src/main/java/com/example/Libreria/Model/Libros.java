@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Table(name = "libros")
 public class Libros {
 
-    @SequenceGenerator(name = "seq",sequenceName = "id_libro",allocationSize = 1)
+    //@SequenceGenerator(name = "seq",sequenceName = "id_libro",allocationSize = 1)
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq")
     private Long id_libro;
@@ -21,7 +21,5 @@ public class Libros {
     private String stock;
 
     private float precio;
-
-    private String genero;
 
 }

@@ -17,9 +17,7 @@ import java.util.Set;
 @Builder
 public class Pedidos {
 
-    @SequenceGenerator(name = "seq",sequenceName = "id_pedido",allocationSize = 1)
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq")
     private Long id_pedido;
 
     @ManyToOne

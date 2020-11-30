@@ -12,9 +12,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "juegos_mesa")
 public class Juego_mesa {
-    @SequenceGenerator(name = "seq",sequenceName = "id_juego_mesa",allocationSize = 1)
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq")
     private Long id_juego_mesa;
 
     private String nombre;
