@@ -13,7 +13,7 @@ import java.util.Set;
 public class CreatePedidoDto {
 
     private String nombre;
-    private float total;
+    private double total;
     private Set<CreateLineDto> linea;
 
     @Getter
